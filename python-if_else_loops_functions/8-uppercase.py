@@ -3,7 +3,7 @@ offset = -32
 
 
 def uppercase(stru):
-    i =0
+    i = 0
     while i < len(stru):
         if islower(stru[i]):
             holder = ord(stru[i]) + offset
@@ -11,7 +11,7 @@ def uppercase(stru):
         else:
             new_str = stru[i]
             print("{}".format(new_str), end='')
-            i= i + i
+            i = i + i
             print("")
 
 
