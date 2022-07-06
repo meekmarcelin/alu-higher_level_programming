@@ -2,8 +2,8 @@
 if __name__ == "__main__":
     import calculator_1 as extra
     import sys
-argnum = len(sys.argv) # indicate arguments number
-both = sys.argv # keep sys module
+argnum = len(sys.argv)  # indicate arguments number
+both = sys.argv  # keep sys module
 if argnum != 4:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     exit(1)
@@ -20,3 +20,4 @@ else:
         print("{:d} + {:d} = {:d}".format(a, b, extra.add(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
