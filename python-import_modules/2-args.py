@@ -12,5 +12,5 @@ elif number == 2:
 elif number > 2:
     print("{:d} arguments:".format(number-1))
     while i < number:
-        print("{d}: {}".format((i), values[i]))
+        print("{:d}: {}".format((i), values[i]))
         i = i + 1
