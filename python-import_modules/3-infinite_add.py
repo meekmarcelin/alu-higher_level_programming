@@ -12,5 +12,5 @@ elif number == 2:
 elif number > 2:
     while i < number:
         summ = summ + int(values[i])
-         i = i + 1
+        i = i + 1
     print("{:d}".format(summ))    
