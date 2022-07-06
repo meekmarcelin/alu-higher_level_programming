@@ -2,7 +2,7 @@
 if __name == "__main__":
     import sys
 values = sys.argv
-number = len9(values)
+number = len(values)
 i = 1
 if number == 1:
     print("0 arguments.")
