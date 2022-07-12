@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    for integer in matrix:
+    for record in matrix:
         count = 0
-        for i in integer:
-            if count == (len(integer) - 1):
+        for i in record:
+            if counter == (len(record) - 1):
                 print("{:d}".format(i), end="")
             else:
                 print("{:d}".fromat(i), end=" ")
-            count += 1
+            counter += 1
         print("")
