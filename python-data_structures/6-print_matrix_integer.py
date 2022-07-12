@@ -6,6 +6,6 @@ def print_matrix_integer(matrix=[[]]):
             if counter == (len(record) - 1):
                 print("{:d}".format(i), end="")
             else:
-                print("{:d}".fromat(i), end=" ")
+                print("{:d}".format(i), end=" ")
             counter += 1
         print("")
