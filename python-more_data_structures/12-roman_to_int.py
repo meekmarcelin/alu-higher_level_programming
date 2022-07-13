@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    for not isinstance(roman_string, str):
+    if not isinstance(roman_string, str):
         return None
     summ = 0
     number = 0
@@ -9,4 +9,3 @@ def roman_to_int(roman_string):
         number = given[i]
         summ += number if summ < number * 5 else -number
     return summ
-
