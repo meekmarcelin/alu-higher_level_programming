@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def safe_print_list_integer(my_list=[], x=o):
+def safe_print_list_integer(my_list=[], x=0):
     i, j = 0, 0
     while i < x:
         try:
