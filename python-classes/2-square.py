@@ -1,18 +1,22 @@
 #!/usr/bin/python3
 """
-DOCUMENTATION MUDULE
+2-square.py
 """
 
 
-
 class Square:
-    """
-    DIFINE THE SQUARE SIZE
-    """
+    """Defines a square"""
+
     def __init__(self, size=0):
+        """
+        Creates an instance of Square
+        Args:
+            size: size of the square
+        """
         if not isinstance(size, int):
-            riase TypeError("size is integer")
-        elif size < 0:
-            riase ValueError("size >=0")
-        else:
-            self._Square__size = size
+            raise TypeError("size must be an integer")
+
+        if size < 0:
+            raise ValueError("size must be >= 0")
+
+        self.__size = size
