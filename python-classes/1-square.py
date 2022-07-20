@@ -3,7 +3,6 @@
 MODULE IS DOCUMENTED
 """
 
-
 class Square:
     """
     CLASS FORMS PRIVATE INSTANCE
