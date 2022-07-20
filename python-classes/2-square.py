@@ -4,6 +4,7 @@ DOCUMENTATION MUDULE
 """
 
 
+
 class Square:
     """
     DIFINE THE SQUARE SIZE
