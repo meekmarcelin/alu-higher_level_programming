@@ -18,6 +18,3 @@ class Square:
 
     def area(self):
         return self._Square__size**2
-
-
-
