@@ -1,22 +1,41 @@
 #!/usr/bin/python3
-class Square:
-    def __init__(self, size=0):
-        self.__size = size
+"""
+4-square.py
+"""
 
-    # Property
+
+class Square:
+    """
+    Defines a square
+    """
+
+    def __init__(self, size=0):
+        """
+        Creates an instance of Square
+        Args:
+            size: size of the square
+        """
+        self.size = size
+
     @property
     def size(self):
+        """
+        Sets and gets the value of private size attribute
+        """
         return self.__size
 
-    # Setter modifies
     @size.setter
     def size(self, value):
-        if type(value) != int:
-            raise TypeError('size must be an integer')
-        elif value < 0:
-            raise ValueError('size must be >= 0')
-        else:
-            self.__size = value
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+
+        if value < 0:
+            raise ValueError("size must be >= 0")
+
+        self.__size = value
 
     def area(self):
-        return self.__size ** 2
+        """
+        Finds area of the square
+        """
+        return self.__size * self.__size
