@@ -4,6 +4,7 @@
 """
 
 
+
 class Square:
     """DEFINE A SQUARE""
 
@@ -23,7 +24,7 @@ class Square:
 
     def area(self):
         """
-        FInds area of the square
+        Finds area of the square
         """
         return self.__size * self.__size
 
