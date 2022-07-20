@@ -3,11 +3,11 @@
 
 
 class Square:
-    """Defines a square""
+    """Defines a square"""
 
     def __init__(self, size=0):
         """
-        creates an instance of Square
+        Creates an instance of Square
         Args:
             size: size of the square
         """
@@ -16,11 +16,11 @@ class Square:
     @property
     def size(self):
         """
-        sets and gets the value of private size attribute
+        Sets and gets the value of private size attribute
         """
         return self.__size
 
-    @size.letter
+    @size.setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -40,7 +40,7 @@ class Square:
         """
         Prints the square using #
         """
-        for i in range(self.__size)
+        for i in range(self.__size):
             print("#" * self.__size)
 
         if (self.__size == 0):
