@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """ Do some magic math"""
 import math
-""" Do some magic math""
+""" Do some magic math"""
+
 
 
 class MagicClass:
-    """make a circle instance"""
+    """creates circle instance"""
     def __init__(self, radius=0):
         if type(radius) != int and type(radius) != float:
             raise TypeError("radius must be a number")
