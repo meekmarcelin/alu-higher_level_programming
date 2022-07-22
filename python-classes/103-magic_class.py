@@ -4,7 +4,6 @@ import math
 """ Do some magic math"""
 
 
-
 class MagicClass:
     """creates circle instance"""
     def __init__(self, radius=0):
