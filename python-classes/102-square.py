@@ -1,62 +1,42 @@
 #!/usr/bin/python3
-"""
-102-square.py
-"""
+"""defines Square class"""
 
 
-class Square:
-    """
-    Defines a square
-    """
+class Square(int):
+    """It represents a square"""
+    def __new__(cls, size):
+        return super().__new__(cls, size ** 2)
 
     def __init__(self, size=0):
-        """
-        Creates an instance of Square
+        """set the square size
         Args:
-            size: size of the square
+            size (int, optional): the square size measure
         """
-        self.size = size
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
+
+    def area(self):
+        """returns the area of the square"""
+        return self.__size ** 2
 
     @property
     def size(self):
-        """
-        Sets and gets the value of private size attribute
-        """
+        """get square property"""
         return self.__size
 
     @size.setter
-    def size(self, value):
-        if not isinstance(value, int):
+    def size(self, size):
+        """set size property
+        Args:
+            size (int): represent the new size
+        """
+        if type(size) != int:
             raise TypeError("size must be an integer")
-
-        if value < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
-
-        self.__size = value
-
-    def area(self):
-        """
-        Finds area of the square
-        """
-        return self.__size * self. 
-
-    def area(self):
-        return (self.size ** 2)
-
-    def __lt__(self, value):
-        return (self.area() < value.area())
-
-    def __le__(self, value):
-        return (self.area() <= value.area())
-
-    def __eq__(self, value):
-        return (self.area() == value.area())
-
-    def __ne__(self, value):
-        return (self.area() != value.area())
-
-    def __gt__(self, value):
-        return (self.area() > value.area())
-
-    def __ge__(self, value):
-        return (self.area() >= value.area())
+        else:
+            self.__size = size
