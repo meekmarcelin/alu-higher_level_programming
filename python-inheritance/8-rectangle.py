@@ -1,17 +1,14 @@
 #!/usr/bin/python3
-""" import triangle geometry """
-
-
-BaseGeometry = __import("7-base_geometry").BaseGeometry
+"""Rectangle inherits from BaseGeometry
+"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """ inherit rectangle class """
+    """Class inherits
+    """
 
     def __init__(self, width, height):
-        """ class """
-
-        self.integer_validator("width", width)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
-        self.integer_validator("height", height)
-        self.__height = height
