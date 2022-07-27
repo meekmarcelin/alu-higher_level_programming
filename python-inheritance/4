@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+""" inherits from python """
+
+
+def inherrits_from(obj, a_class):
+
