@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" json string """
+"""to_json_string
+"""
 import json
-""" import json """
-
 
 def to_json_string(my_obj):
-    """ json is converted  """
-    return json.loads(my_str)
+    """Return JSON format of my_obj
+    """
+
+    return json.dumps(my_obj)
