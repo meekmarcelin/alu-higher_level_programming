@@ -18,8 +18,7 @@ class Student:
         return self.__dict__]
 
     def reload_from_json(sel, json):
-        """ a function for reloading""
-
-
+      """
+        """
         for i, j in json.items():
             self.__dict__[i] = j
