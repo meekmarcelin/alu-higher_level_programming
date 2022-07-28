@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""to_json_string
-"""
+""" using json module to access use """
 import json
+""" module converts json string to object """
 
-def to_json_string(my_obj):
-    """Return JSON format of my_obj
-    """
 
-    return json.dumps(my_obj)
+def from_json_string(my_str):
+    """ convert obj to json """
+    return json.loads(my_str)
