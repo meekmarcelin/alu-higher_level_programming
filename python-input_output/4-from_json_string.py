@@ -5,6 +5,5 @@ import json
 
 
 def to_json_string(my_obj):
-    """ json function """
-
+    """ json is converted  """
     return json.loads(my_str)
