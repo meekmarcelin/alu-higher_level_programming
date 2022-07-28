@@ -5,5 +5,5 @@
 def append_write(filename="", text=""):
     """ Append the text """
     with open(filename, "a", encoding="utf-8") as f:
-        f.wite(text)
+        f.write(text)
     return len(text)
