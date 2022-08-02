@@ -6,6 +6,6 @@ import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    postreq = {'email': sys.argv[2]}
-    r = request.post(url, data=postreq)
+    test = {'email': sys.argv[2]}
+    r = request.post(url, data=test)
     print(r.text)
