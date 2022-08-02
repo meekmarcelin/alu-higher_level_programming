@@ -5,6 +5,7 @@ import urllib.parse
 import sys
 
 
+
 if __name__ == "__main__":
     values = {'email': sys.arg[2]}
     data = urllib.parse.urlencode(values)
