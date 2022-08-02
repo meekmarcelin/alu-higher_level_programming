@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Dedicate error """
+"""checks url status"""
 import requests
 import sys
 
