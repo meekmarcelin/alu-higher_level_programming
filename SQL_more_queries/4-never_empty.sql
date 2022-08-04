@@ -1,0 +1,2 @@
+-- create table
+CREATE TABLE IF NOT EXISTS (id INT, NOT NULL name VARCHAR(256));
