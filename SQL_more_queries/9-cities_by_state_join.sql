@@ -1,5 +1,5 @@
 -- show all cities
-SELECT cities.id, cities.name, states.name;
+SELECT cities.id, cities.name, states.name
 FROM cities 
 JOIN states
 ON cities.state.id = states.id
