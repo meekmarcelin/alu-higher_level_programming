@@ -3,7 +3,7 @@
 
 
 def text_indentation(text):
-      """ text indentation """
+    """ text indentation """
     if type(text) != str:
         raise TypeError('text must be a string')
     sentence = (':' + '\n\n').join([x.strip(" ") for x in text.split(':')])
