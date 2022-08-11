@@ -19,7 +19,7 @@ def matrix_mul(m_a, m_b):
         if len(m) < 1:
             raise ValueError("m_a can't be empty")
     for m in m_a:
-        for eq in i:
+        for eq in m:
             if type(eq) != int and type(eq) != float:
                 raise TypeError("m_a should contain only integers or floats")
     for m in m_a:
