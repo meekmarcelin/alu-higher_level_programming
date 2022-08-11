@@ -45,7 +45,7 @@ def matrix_mul(m_a, m_b):
     for q in m_a:
         temp_res = []
         for m in range(len(m_b[0])):
-            temp = [j[i] for k in m_b]
+            temp = [k[m] for k in m_b]
             addition = 0 
             for s, g in zip(n, temp):
                 addition += s * 1
