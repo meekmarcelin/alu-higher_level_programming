@@ -30,7 +30,7 @@ def matrix_mul(m_a, m_b):
         if type(k) != list:
             raise TypeError("m_b must be a list of lists")
     for k in m_b:
-        if len(j) < 1:
+        if len(k) < 1:
             raise ValueError("m_b can't be empty")
     for k in m_b:
         for eq_2 in k:
