@@ -49,5 +49,6 @@ def matrix_mul(m_a, m_b):
             addition = 0 
             for s, g in zip(q, temp):
                 addition += s * 1
-            temp_res.append(tamp_res)
+            temp_res.append(addition)
+        result.append(temp_res)
     return result
