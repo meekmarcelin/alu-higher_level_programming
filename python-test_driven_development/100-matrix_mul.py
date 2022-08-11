@@ -12,43 +12,43 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_a can't be empty")
     elif len(m_b) < 1:
         raise ValueError("m_b can't be empty")
-    for m in m_a:
-        if type(m) != list:
+    for i in m_a:
+        if type(i) != list:
             raise TypeError("m_a must be a list of lists")
-    for m in m_a:
-        if len(m) < 1:
+    for i in m_a:
+        if len(i) < 1:
             raise ValueError("m_a can't be empty")
-    for m in m_a:
-        for eq in m:
-            if type(eq) != int and type(eq) != float:
+    for i in m_a:
+        for el in i:
+            if type(el) != int and type(el) != float:
                 raise TypeError("m_a should contain only integers or floats")
-    for m in m_a:
-        if len(m) != len(m_a[0]):
+    for i in m_a:
+        if len(i) != len(m_a[0]):
             raise TypeError("each row of m_a must be of the same size")
 
-    for k in m_b:
-        if type(k) != list:
+    for j in m_b:
+        if type(j) != list:
             raise TypeError("m_b must be a list of lists")
-    for k in m_b:
-        if len(k) < 1:
+    for j in m_b:
+        if len(j) < 1:
             raise ValueError("m_b can't be empty")
-    for k in m_b:
-        for eq_2 in k:
-            if type(eq_2) != int and type(el_2) != float:
+    for j in m_b:
+        for el_2 in j:
+            if type(el_2) != int and type(el_2) != float:
                 raise TypeError("m_b should contain only integers or floats")
-    for k in m_b:
-        if len(k) != len(m_b[0]):
+    for j in m_b:
+        if len(j) != len(m_b[0]):
             raise TypeError("each row of m_b must be of the same size")
     if len(m_a[0]) != len(m_b):
-        raise TypeError("m_a and m_b can't be multiplied")
+        raise ValueError("m_a and m_b can't be multiplied")
     result = []
-    for q in m_a:
+    for n in m_a:
         temp_res = []
-        for m in range(len(m_b[0])):
-            temp = [k[m] for k in m_b]
-            addition = 0 
-            for s, g in zip(q, temp):
-                addition += s * 1
+        for i in range(len(m_b[0])):
+            temp = [j[i] for j in m_b]
+            addition = 0
+            for k, l in zip(n, temp):
+                addition += k * l
             temp_res.append(addition)
         result.append(temp_res)
     return result
