@@ -23,7 +23,7 @@ def matrix_mul(m_a, m_b):
             if type(eq) != int and type(eq) != float:
                 raise TypeError("m_a should contain only integers or floats")
     for m in m_a:
-        if len(i) != len(m_a[0]):
+        if len(m) != len(m_a[0]):
             raise TypeError("each row of m_a must be of the same size")
 
     for k in m_b:
