@@ -55,12 +55,12 @@ class Base:
         else:
             return json.loads(json_string)
 
-   @classmethod
-   def create(cls, **dictionary):
+    @classmethod
+    def create(cls, **dictionary):
         """ return instance """
-        if cls.__name__ == 'Rectangle':
-            shape = cls(1, 1)
         if cls.__name__ == 'square':
             shape = cls(1)
+        else:
+            shape = cls(1, 1)
         shape.update(**dictionary)
         return shape
