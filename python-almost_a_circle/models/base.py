@@ -58,7 +58,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ return instance """
-        if cls.__name__ == 'square':
+        if cls.__name__ == 'Square':
             shape = cls(1)
         else:
             shape = cls(1, 1)
