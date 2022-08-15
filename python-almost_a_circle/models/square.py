@@ -13,3 +13,12 @@ class Square(Rectangle):
     def to_dictionary(self):
         """ dic to return square """
         return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
+
+    @property
+    def size(self):
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.height = value
