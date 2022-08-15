@@ -10,6 +10,6 @@ class Square(Rectangle):
         """ function for square """
         super().__init__(size, size, x, y, id)
 
-    def to_dictionary(self):
-        """ square dictinary must be returned """
+    def __str__(self):
+        """ attribute for square """
         return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
