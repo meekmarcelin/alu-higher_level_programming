@@ -6,14 +6,14 @@ from .rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """docstring for ."""
+    """ square class """
 
     def __init__(self, size, x=0, y=0, id=None):
         """ class constructor"""
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Defines print attribute """
+        """ anathor attribute """
         attributes = "[Square] ({}) {}/{} - {}"
         return attributes.format(self.id, self.x, self.y, self.width)
 
@@ -24,12 +24,12 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        """ setter of the size attribute """
+        """ setter for size """
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """method that assigns attributes"""
+        """ assign the  attributes """
         if len(args):
             i = 0
             keys_of_attributes = ['id', 'size', 'x', 'y']
@@ -42,7 +42,7 @@ class Square(Rectangle):
                 setattr(self, keys_of_attributes, value)
 
     def to_dictionary(self):
-        """ Returns a square dictionary """
+        """ square dictionary """
         dic = {
             'id': self.id,
             'size': self.width,
