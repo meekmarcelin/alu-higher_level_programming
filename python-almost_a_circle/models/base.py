@@ -65,7 +65,6 @@ class Base:
         shape.update(**dictionary)
         return shape
 
-
     @classmethod
     def load_from_file(cls):
         try:
