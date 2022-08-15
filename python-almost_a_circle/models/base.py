@@ -65,8 +65,9 @@ class Base:
         shape.update(**dictionary)
         return shape
 
-     @classmethod 
-     def load_from_file(cls):
+
+    @classmethod
+    def load_from_file(cls):
         try:
             with open(cls.__name__ + '.json') as f:
                 text = f.read()
