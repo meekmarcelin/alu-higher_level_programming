@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""Square class module"""
+""" create a class for python """
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """defines square instances"""
+    """ square class """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """instantiate a square"""
+        """ function for square """
         super().__init__(size, size, x, y, id)
 
     def to_dictionary(self):
-        """return square dictionary representation"""
+        """ dic to return square """
         return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
