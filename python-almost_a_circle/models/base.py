@@ -46,3 +46,11 @@ class Base:
         with open(cls.__name__ + '.csv', 'w', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerows(dict_list)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ update and add """
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
