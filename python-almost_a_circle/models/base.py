@@ -65,27 +65,32 @@ class Base:
         shape.update(**dictionary)
         return shape
 
-     @classmethod
-    def load_from_file(cls):
-        """ add class method """
+     @classmethod 
+     def load_from_file(cls):
         try:
-            with open(cls.__name__ + ".json", "r") as f:
-                return [cls.create(**dictionary) for
-                        dictionary in cls.from_json_string(f.read())]
+            with open(cls.__name__ + '.json') as f:
+                text = f.read()
+                return [cls.create(**i) for i in cls.from_json_string(text)]
         except FileNotFoundError:
             return []
 
     @classmethod
     def load_from_file_csv(cls):
-        """ function for adding class method """
         try:
-            with open(cls.__name__ + ".csv", "r") as f:
-                ld = []
-                reader = csv.DictReader(f)
-                for row in reader:
-                    for key, val in row.items():
-                        row[key] = int(val)
-                ld.append(row)
-                return [cls.create(**item) for item in ld]
+            with open(cls.__name__ + '.csv') as f:
+                text_dict = csv.DictReader(f)
+                if cls.__name__ == 'Square':
+                    return [cls.create(**{'id': int(i['id']),
+                                          'size': int(i['size']),
+                                          'x': int(i['x']),
+                                          'y': int(i['y'])
+                                          }) for i in text_dict]
+                else:
+                    return [cls.create(**{'id': int(i['id']),
+                                          'width': int(i['width']),
+                                          'height': int(i['height']),
+                                          'x': int(i['x']),
+                                          'y': int(i['y'])
+                                          }) for i in text_dict]
         except FileNotFoundError:
             return []
