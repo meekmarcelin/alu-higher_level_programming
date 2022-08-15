@@ -64,3 +64,28 @@ class Base:
             shape = cls(1, 1)
         shape.update(**dictionary)
         return shape
+
+     @classmethod
+    def load_from_file(cls):
+        """ add class method """
+        try:
+            with open(cls.__name__ + ".json", "r") as f:
+                return [cls.create(**dictionary) for
+                        dictionary in cls.from_json_string(f.read())]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ function for adding class method """
+        try:
+            with open(cls.__name__ + ".csv", "r") as f:
+                ld = []
+                reader = csv.DictReader(f)
+                for row in reader:
+                    for key, val in row.items():
+                        row[key] = int(val)
+                ld.append(row)
+                return [cls.create(**item) for item in ld]
+        except FileNotFoundError:
+            return []
