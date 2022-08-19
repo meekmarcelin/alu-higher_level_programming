@@ -2,7 +2,7 @@
 import unittest
 import os
 from unittest.mock import patch, call
-from models.base import Base
+from .base import Base
 from models.rectangle import Rectangle
 
 
