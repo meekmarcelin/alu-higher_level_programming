@@ -1,22 +1,25 @@
 #!/usr/bin/python3
-""" List all the states """
+""" list all states """
 import MySQLdb
 import sys
 
 
 def get_states():
-    """ list the arguments
-
+    """ list from database
     Arguments:
         argv[1]: mysql username
         argv[2]: mysql password
         argv[3]: database name
     """
-    db = MySQLdb.connect(user=argv[1], passwd=.argv[2], db.argv[3])
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3])
 
     cur = db.cursor()
 
-    cur.execute("select * FROM states ORDER BY id ASC")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cur.fetchall()
     for i in rows:
         print(i)
@@ -24,5 +27,5 @@ def get_states():
     cur.close()
     db.close()
 
-    if __name__ == "__main__":
-        get_states()
+if __name__ == "__main__":
+    get_states()
