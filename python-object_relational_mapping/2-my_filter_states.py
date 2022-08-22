@@ -11,8 +11,8 @@ if __name__ == "__main__":
     ORDER BY states.id ASC".format(argv[4]))
     lst = cur.fetchall()
     for s in lst:
-        if r[1] == argv[4]:
-            print(r)
+        if s[1] == argv[4]:
+            print(s)
     cur.close()
     db.close()
 
