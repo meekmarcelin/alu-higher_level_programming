@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""change the name of the state 
+"""Change name of State obj from db 'hbtn_0e_6_usa
 """
 import sys
 from sqlalchemy.orm import sessionmaker
